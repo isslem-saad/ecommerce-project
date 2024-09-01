@@ -1,0 +1,18 @@
+
+  <div class="video-gallery">
+    <div class="video-container" *ngFor="let video of videos; let i = index">
+      <div class="video-wrapper">
+        <video [src]="video.src" autoplay loop [muted]="true" playsinline>
+          <source [src]="video.src" [type]="video.type" />
+          Your browser does not support the video tag.
+        </video>
+        <!-- Show "Coming Soon" label after 5 seconds for the specified video -->
+        <div *ngIf="video.showLabel" class="overlay">
+          <span>Coming Soon</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  

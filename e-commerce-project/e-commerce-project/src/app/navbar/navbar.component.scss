@@ -1,0 +1,117 @@
+// .navbar {
+//   background-color: #fff;
+//   padding: 1rem;
+// }
+/* CSS for a sticky navbar */
+.navbar {
+  position: sticky;
+  top: 0; /* Stick to the top */
+  z-index: 1000; /* Ensure it stays above other content */
+  background-color:#f8f9fb; /* Background color to cover content below */
+  border-bottom: 1px solid #ddd; /* Optional: border for separation */
+  padding: 1.2rem;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #000;
+}
+
+.menu-items {
+  display: flex;
+  align-items: center;
+}
+
+.menu-links {
+  display: flex;
+}
+
+.menu-link {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #000;
+}
+
+.cart-icon-container {
+  position: relative;
+}
+
+.cart-icon {
+  text-decoration: none;
+  color: #000;
+}
+
+.cart-svg {
+  width: 24px;
+  height: 24px;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: red;
+  color: #fff;
+  border-radius: 50%;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+}
+
+.mobile-menu-button {
+  display: none;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-icon {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 768px) {
+  .menu-links {
+      display: none;
+  }
+
+  .mobile-menu-button {
+      display: block;
+  }
+
+  .menu-items.show .menu-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+  }
+
+  .menu-items.show {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+  }
+}
+a {
+  margin: 0 10px;
+  color: #333;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.active {
+  color: #666;
+  text-decoration: underline;
+}

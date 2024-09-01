@@ -1,0 +1,14 @@
+<div>
+    <label for="category">Category:</label>
+    <select id="category" [(ngModel)]="selectedCategory" (change)="onFilterChange()">
+      <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+    </select>
+  </div>
+  
+  <div *ngIf="selectedCategory === CategoryName.MAKEUP">
+    <label for="typeMakeup">Type of Makeup:</label>
+    <select id="typeMakeup" [(ngModel)]="selectedTypeMakeup" (change)="onFilterChange()">
+      <option *ngFor="let type of typeMakeupOptions" [value]="type">{{ type }}</option>
+    </select>
+  </div>
+  

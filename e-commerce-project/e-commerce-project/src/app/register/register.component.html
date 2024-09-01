@@ -1,0 +1,52 @@
+
+<div class="register-container">
+  <div class="content">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="register-form p-4  rounded">
+      <h2 class="text-center mb-4">Sign Up</h2>
+      <div class="mb-3 mt-8">
+        <input
+          formControlName="firstname"
+          class="form-control"
+          placeholder="First Name"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <input
+          formControlName="lastname"
+          class="form-control"
+          placeholder="Last Name"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <input
+          formControlName="email"
+          class="form-control"
+          placeholder="Email"
+          type="email"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <input
+          formControlName="password"
+          class="form-control"
+          placeholder="Password"
+          type="password"
+          required
+        />
+      </div>
+      <button type="submit" class="btn btn-primaryy w-100">Sign Up</button>
+      <div class="text-center mt-3">
+        <a href="/login" class="login-link">Already have an account?</a>
+        </div>
+    </form>
+    <div class="video-container">
+      <video loop muted autoplay>
+        <source src="assets/video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="sidebar-container" id="sidebar-main-container">
+  <div class="sidebar">
+    <h4>GLOWING</h4>
+    <a routerLink="admin-product" routerLinkActive="active"> <i class="fas fa-boxes"></i> Products</a>
+    <a href="#contact">
+      <i class="fas fa-users"></i> Customers
+    </a>
+    <a *ngIf="isLoggedIn" (click)="logout()"><i class="fas fa-sign-out-alt"></i> Logout</a>
+  </div>
+</div>
+<div class="content">
+  <router-outlet></router-outlet>
+</div>

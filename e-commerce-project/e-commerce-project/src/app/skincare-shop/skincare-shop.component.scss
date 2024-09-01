@@ -1,0 +1,74 @@
+.product-store {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .product-card {
+    width: 23%; /* Adjust this percentage to fit 4 cards in a row */
+    margin-bottom: 20px; /* Add space between rows */
+    margin-right: 1%; /* Add space between cards */
+    position: relative;
+    overflow: hidden; /* Ensure image covers the whole card */
+    border: 1px solid #ddd; /* Add border for better separation */
+    padding: 10px; /* Add padding inside the card */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+  }
+  
+  .product-card .image-holder {
+    width: 100%;
+    height: 350px; /* Adjust the height to be slightly bigger than the width */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .product-card .image-holder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the area */
+  }
+  
+  .cart-concern {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px; /* Adjust height as needed */
+  }
+  
+  .cart-button a {
+    width: auto;
+    padding: 10px 20px; /* Adjust padding for the button size */
+    text-align: center;
+    font-size: 15px;
+    display: block;
+    margin: 0 auto; /* Center the button */
+  }
+  
+  .card-detail {
+    padding-top: 10px; /* Add padding for spacing between details and button */
+  }
+  
+  @media (max-width: 1200px) {
+    .product-card {
+      width: 48%; /* Adjust for smaller screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .product-card {
+      width: 100%; /* Stack cards on top of each other for mobile devices */
+    }
+  }
+  .product-scroll-container {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .product-card {
+    display: inline-block;
+    width: 250px; /* Adjust width as needed */
+    margin-right: 20px; /* Space between items */
+  }
+  

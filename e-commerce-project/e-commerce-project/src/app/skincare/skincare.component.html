@@ -1,0 +1,35 @@
+
+
+<div *ngFor="let product of products" class="product-card">
+  <div class="image-holder">
+    <img [src]="product?.imageUrl" [alt]="product?.name">
+    <div class="cart-concern">
+      <div class="cart-button">
+        <a href="#" class="btn btn-medium btn-black">Add to Cart<svg class="cart-outline"><use xlink:href="#cart-outline"></use></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="card-detail d-flex flex-column pt-2">
+    <h3 class="card-title">{{product?.name}}</h3>
+    <p class="product-description">{{product?.description}}</p>
+    <span class="item-price">{{product?.price}} Dt</span>
+  </div>
+</div>
+
+<nav aria-label="Product navigation" class="custom-pagination">
+  <ul class="pagination justify-content-center">
+    <li class="page-item" [class.disabled]="currentPage === 0">
+      <a class="page-link" (click)="onPageChange(currentPage - 1)" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li class="page-item" [class.active]="pageNumber === currentPage" *ngFor="let pageNumber of getPageNumbers()">
+      <a class="page-link" (click)="onPageChange(pageNumber)">{{pageNumber + 1}}</a>
+    </li>
+    <li class="page-item" [class.disabled]="currentPage === getTotalPages() - 1">
+      <a class="page-link" (click)="onPageChange(currentPage + 1)" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>

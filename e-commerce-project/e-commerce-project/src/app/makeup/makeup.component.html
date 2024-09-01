@@ -1,0 +1,45 @@
+ <div class="row">
+    <ng-container *ngFor="let product of products">
+      <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
+        <div class="swiper product-watch-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="makeup-item rounded position-relative">
+                <div class="makeup-img">
+                  <img [src]="product?.imageUrl" class="img-fluid rounded-top" alt="Product Image">
+                </div>
+                <div class="makeup-content border border-secondary border-top-0 rounded-bottom">
+                  <h4>{{ product?.name }}</h4>
+                  <p class="description">{{ product?.description }}</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <p class="price text-dark fw-bold mb-0">{{ product?.price }} Dt</p>
+                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary">
+                      <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  
+<nav aria-label="Product navigation" class="custom-pagination">
+  <ul class="pagination justify-content-center">
+    <li class="page-item" [class.disabled]="currentPage === 0">
+      <a class="page-link" (click)="onPageChange(currentPage - 1)" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li class="page-item" [class.active]="pageNumber === currentPage" *ngFor="let pageNumber of getPageNumbers()">
+      <a class="page-link" (click)="onPageChange(pageNumber)">{{pageNumber + 1}}</a>
+    </li>
+    <li class="page-item" [class.disabled]="currentPage === getTotalPages() - 1">
+      <a class="page-link" (click)="onPageChange(currentPage + 1)" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav> 

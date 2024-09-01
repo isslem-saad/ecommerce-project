@@ -1,0 +1,123 @@
+ 
+  .product-card {
+  width: 250px; /* Fixed width */
+  height: 350px; /* Fixed height - adjust as needed */
+  margin-bottom: 15px;
+  margin-right: 1%;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  padding: 0; /* Remove padding to ensure image fits the container */
+  box-sizing: border-box;
+  display: inline-block;
+  border-radius: 10px; /* Add rounded corners */
+}
+/* Add padding and border radius to the search input */
+.search-input {
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  border: 2px solid #ccc;
+  transition: border-color 0.3s ease-in-out;
+}
+
+/* Change border color on focus */
+.search-input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Adjust the spacing between the input and other elements */
+.form-inline .form-control {
+  margin-right: 10px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .form-inline {
+     flex-direction: column;
+     align-items: flex-end;
+  }
+
+  .form-inline .form-control {
+     margin-right: 0;
+     margin-bottom: 10px;
+     width: 100%;
+  }
+}
+
+.image-holder {
+  width: 100%;
+  height: 250px; /* Fixed height for image area */
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0; /* Round the top corners */
+}
+
+.image-holder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This will crop the image to fill the space */
+  object-position: center; /* Centers the image */
+  display: block; /* Remove any extra space below the image */
+}
+
+.cart-concern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 10px; /* Ensure overlay matches the card's rounded corners */
+}
+
+// .product-card:hover .cart-concern {
+//   opacity: 1;
+// }
+
+// .cart-button {
+//   text-align: center;
+// }
+
+// .btn-medium {
+//   font-size: 14px;
+//   padding: 8px 15px;
+// }
+
+ .card-detail {
+//   height: calc(100% - 250px); /* Remaining height after image */
+   padding: 8px; /* Add padding for spacing */
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+ }
+
+.card-title {
+ // font-family: 'Roboto', sans-serif; /* Updated font */
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// .item-price {
+//   font-family: 'Roboto', sans-serif; /* Updated font */
+//   font-size: 15px;
+//   font-weight: 600;
+//   color: #4a4a4a;
+//}
+.nav-link{
+  padding-bottom: 20px;
+  font-weight: bolder;
+
+}
